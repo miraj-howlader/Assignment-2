@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b0217;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, #1a0735, #0b0217);
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.logo span {
+  background: linear-gradient(90deg, #ff3cac, #784ba0);
+   background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* BUTTON */
+.subscribe-btn {
+  background: linear-gradient(90deg, #ff3cac, #ffd86f);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+  transform: scale(1.05);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #0b0217;
+}
+
+.mobile-menu a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.mobile-menu a:hover {
+  color: white;
+}
+
+.mobile-btn {
+  width: 100%;
+  padding: 12px;
+}
+
+/* ACTIVE */
+.mobile-menu.active {
+  display: flex;
+}
+
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a0a3c, #070010);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* WAVES (placeholder) */
+.wave {
+  position: absolute;
+  top: 0%;
+  width:0%;
+  justify-content: center;
+  align-items: center;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #ff4ecd, #ffd86f, transparent);
+}
+
+.wave-left {
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .wave-right {
+top: 0;
+ 
+} */
+
+/* CENTER CONTENT */
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+  z-index: 2;
+}
+
+/* LOGO CIRCLE */
+.logo-circle {
+  width: 290px;
+  height: 290px;
+  margin: auto;
+  margin-right: 37px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff3cac, #784ba0, #ffd86f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 40px rgba(255, 60, 172, 0.4);
+}
+
+.mic-icon {
+  font-size: 60px;
+}
+
+/* NEW BADGE */
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background: #22ff9a;
+  color: black;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* TEXT */
+.hero-content h1 {
+  font-size: 48px;
+  margin: 30px 0 15px;
+}
+
+.hero-content p {
+  color: #cfcfcf;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 26px;
+  color: white;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary {
+  background: linear-gradient(90deg, #ff3cac, #ffd86f);
+  border: none;
+  font-weight: bold;
+}
+
+.outline {
+  background: transparent;
+  border: 2px solid #22ff9a;
+  color: #22ff9a;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links,
+  .subscribe-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
