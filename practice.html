@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWave - Technology Podcast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background-color: #1e293b;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+        
+        .logo i {
+            font-size: 2.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #cbd5e1;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #94a3b8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f1f5f9;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .stat-box {
+            background-color: #1e293b;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        
+        /* Episodes Section */
+        .episodes {
+            padding: 80px 0;
+            background-color: #1e293b;
+        }
+        
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .episode-card {
+            background-color: #0f172a;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #334155;
+        }
+        
+        .episode-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .episode-img {
+            height: 200px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .episode-content {
+            padding: 25px;
+        }
+        
+        .episode-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #f1f5f9;
+        }
+        
+        .episode-description {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        
+        .episode-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .subscribe {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .subscribe-form {
+            max-width: 500px;
+            margin: 40px auto 0;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .subscribe-input {
+            flex-grow: 1;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 2px solid #334155;
+            background-color: #1e293b;
+            color: #f1f5f9;
+            font-size: 1rem;
+        }
+        
+        .subscribe-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            padding: 50px 0 30px;
+            border-top: 1px solid #334155;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: #94a3b8;
+            font-size: 1.3rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #3b82f6;
+        }
+        
+        .copyright {
+            text-align: center;
+            color: #64748b;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .episode-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .episode-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .subscribe-form {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .about, .episodes, .subscribe {
+                padding: 60px 0;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-podcast"></i>
+                    <span>TechWave</span>
+                </div>
+                
+                <nav class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#episodes">Episodes</a>
+                    <a href="#subscribe">Subscribe</a>
+                </nav>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Stay Ahead in the Fast-Paced World of Technology</h1>
+            <p>TechWave breaks down complex topics into digestible insights, explores productivity strategies that actually work, and shares stories of personal growth from industry leaders.</p>
+            <a href="#subscribe" class="cta-button">Start Listening Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About The Podcast</h2>
+            <p class="section-subtitle">Join thousands of young professionals and tech enthusiasts who start their day with TechWave.</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p><span class="highlight">TechWave</span> is your go-to podcast for staying ahead in the fast-paced world of technology. We break down complex topics into digestible insights, explore productivity strategies that actually work, and share stories of personal growth from industry leaders.</p>
+                    <p>Our mission is to make cutting-edge technology accessible to everyone, from beginners to seasoned professionals. Each episode is crafted to provide actionable takeaways you can implement immediately.</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">150K+</div>
+                        <div class="stat-label">MONTHLY LISTENERS</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">EPISODES PUBLISHED</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-number">4.9★</div>
+                        <div class="stat-label">AVERAGE RATING</div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">INDUSTRY EXPERTS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section class="episodes" id="episodes">
+        <div class="container">
+            <h2 class="section-title">Latest Episodes</h2>
+            <p class="section-subtitle">Explore our most recent discussions with technology leaders and innovators.</p>
+            
+            <div class="episode-grid">
+                <div class="episode-card">
+                    <div class="episode-img">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">The Future of AI in Everyday Life</h3>
+                        <p class="episode-description">How artificial intelligence is transforming daily routines and what it means for the future of work.</p>
+                        <div class="episode-meta">
+                            <span><i class="far fa-clock"></i> 45 min</span>
+                            <span><i class="far fa-calendar"></i> Apr 10, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="episode-card">
+                    <div class="episode-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">Productivity Tools That Actually Work</h3>
+                        <p class="episode-description">Cut through the noise and discover the productivity strategies that deliver real results.</p>
+                        <div class="episode-meta">
+                            <span><i class="far fa-clock"></i> 52 min</span>
+                            <span><i class="far fa-calendar"></i> Apr 3, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="episode-card">
+                    <div class="episode-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="episode-content">
+                        <h3 class="episode-title">Web Development Trends 2023</h3>
+                        <p class="episode-description">From frameworks to design patterns, explore what's shaping modern web development.</p>
+                        <div class="episode-meta">
+                            <span><i class="far fa-clock"></i> 48 min</span>
+                            <span><i class="far fa-calendar"></i> Mar 27, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe" id="subscribe">
+        <div class="container">
+            <h2 class="section-title">Never Miss an Episode</h2>
+            <p class="section-subtitle">Subscribe to get the latest episodes delivered directly to your inbox.</p>
+            
+            <form class="subscribe-form">
+                <input type="email" class="subscribe-input" placeholder="Enter your email address" required>
+                <button type="submit" class="cta-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">TechWave</div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                    <a href="#"><i class="fab fa-google-play"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 TechWave Podcast. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Form submission
+        document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.subscribe-input').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive updates about new episodes.`);
+            this.reset();
+        });
+        
+        // Responsive navigation adjustment
+        window.addEventListener('resize', function() {
+            const navLinks = document.querySelector('.nav-links');
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
