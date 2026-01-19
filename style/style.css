@@ -10,7 +10,7 @@ body {
   color: white;
 }
 
-/* NAVBAR */
+
 .navbar {
   background: linear-gradient(90deg, #1a0735, #0b0217);
   width: 100%;
@@ -25,7 +25,7 @@ body {
   justify-content: space-between;
 }
 
-/* LOGO */
+
 .logo {
   font-size: 38px;
   font-weight: bold;
@@ -37,7 +37,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* LINKS */
+
 .nav-links {
   display: flex;
   gap: 40px;
@@ -54,7 +54,7 @@ body {
   color: white;
 }
 
-/* BUTTON */
+
 .subscribe-btn {
   background: linear-gradient(90deg, #ff3cac, #ffd86f);
   border: none;
@@ -70,14 +70,14 @@ body {
   transform: scale(1.05);
 }
 
-/* HAMBURGER */
+
 .hamburger {
   display: none;
   font-size: 30px;
   cursor: pointer;
 }
 
-/* MOBILE MENU */
+
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -101,7 +101,7 @@ body {
   padding: 12px;
 }
 
-/* ACTIVE */
+
 .mobile-menu.active {
   display: flex;
 }
@@ -117,7 +117,7 @@ body {
   padding: 40px 20px;
 }
 
-/* WAVES (placeholder) */
+
 .wave {
   position: absolute;
   top: 0%;
@@ -137,14 +137,14 @@ body {
 
 
 
-/* CENTER CONTENT */
+
 .hero-content {
   text-align: center;
   max-width: 600px;
   z-index: 2;
 }
 
-/* LOGO CIRCLE */
+
 .logo-circle {
   width: 290px;
   height: 290px;
@@ -163,7 +163,7 @@ body {
   font-size: 60px;
 }
 
-/* NEW BADGE */
+
 .badge {
   position: absolute;
   top: 20px;
@@ -176,7 +176,7 @@ body {
   font-weight: bold;
 }
 
-/* TEXT */
+
 .hero-content h1 {
   font-size: 48px;
   margin: 30px 0 15px;
@@ -189,7 +189,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* BUTTONS */
+
 .buttons {
   display: flex;
   gap: 15px;
@@ -285,16 +285,16 @@ h1 {
 
 .grid-layout {
     display: grid;
-    /* Defines 2 columns with equal width */
+    
     margin-left: 190px;
     grid-template-columns: 1fr 1fr; 
-    /* Defines 3 rows, letting content define height (auto) */
+    
     grid-template-rows: auto auto auto;
-    gap: 30px; /* Space between grid items */
+    gap: 30px; 
 }
 
 .card {
-    background-color: #2f1352; /* Card background color */
+    background-color: #2f1352; 
     padding: 30px;
     border-radius: 15px;
     text-align: left;
@@ -307,7 +307,7 @@ h1 {
 .card img {
     width: 40px;
     margin-bottom: 15px;
-    color: #d1b7ff; /* Icon color */
+    color: #d1b7ff;
 }
 
 .card h2 {
@@ -321,34 +321,34 @@ h1 {
     line-height: 1.4;
 }
 
-/* Span the 'Premium Audio Quality' and 'Exclusive Interviews' cards across two grid rows */
+
 .premium, .exclusive {
     grid-row: span 2; 
 }
 
-/* Position the cards in the desired columns */
+
 .premium {
-    grid-column: 1 / 2; /* Column 1 */
+    grid-column: 1 / 2; 
 }
 
 .mobile {
-    grid-column: 2 / 3; /* Column 2 */
-    grid-row: 1 / 2; /* Row 1 */
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2; 
 }
 
 .global {
-    grid-column: 2 / 3; /* Column 2 */
-    grid-row: 2 / 3; /* Row 2 */
+    grid-column: 2 / 3; 
+    grid-row: 2 / 3; 
 }
 
 .exclusive {
-    grid-column: 1 / 2; /* Column 1 */
-    grid-row: 3 / 4; /* Row 3 (it spans up, but this places its start correctly) */
+    grid-column: 1 / 2; 
+    grid-row: 3 / 4; 
 }
 
 .resources {
-    grid-column: 2 / 3; /* Column 2 */
-    grid-row: 3 / 4; /* Row 3 */
+    grid-column: 2 / 3; 
+    grid-row: 3 / 4; 
 }
 
 
@@ -364,7 +364,7 @@ h1 {
   font-size: 2rem;
 }
 
-/* Grid */
+
 .feature-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -375,7 +375,7 @@ h1 {
   
 }
 
-/* Card */
+
 .feature-card {
   background-color: #4e287d;
   
@@ -385,11 +385,11 @@ h1 {
   padding-bottom: 20px;
 }
 
-/* Responsive video */
+
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%; 
 }
 
 .video-wrapper iframe {
@@ -400,7 +400,7 @@ h1 {
   height: 100%;
 }
 
-/* Content */
+
 .feature-card h2 {
   font-size: 30px;
   margin: 15px;
@@ -412,7 +412,7 @@ h1 {
   
 }
 
-/* Clock */
+
 .clock {
   display: flex;
   align-items: center;
@@ -432,6 +432,8 @@ h1 {
 
 
 /* meet the host section  */
+
+
 .host-section-container {
     width: 100%;
     max-width: 900px;
@@ -446,25 +448,25 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Profile Card Styling */
+
 .profile-card {
-    background-color: #3b1b61; /* Inner card background */
+    background-color: #3b1b61; 
     padding: 40px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 30px;
     text-align: left;
-    /* Optional: subtle shadow/glow */
+    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 50%; 
     object-fit: cover;
-    /* Ensure the placeholder image works */
+    
     background-color: #5d3d8a; 
     border: 3px solid #5d3d8a;
 }
@@ -483,7 +485,7 @@ h1 {
 }
 
 .social-links img{
-   /* Icon color */
+   
     font-size: 2rem;
     border:2px solid #5d3d8a;
     margin-right: 15px;
@@ -502,11 +504,11 @@ h1 {
 .footer-section {
     width: 100%;
     margin-top: 50px;
-    /* Add your wave background image here as requested */
+   
     background-image: url('../images/footer-bg.png');
     background-size: cover;
     background-position: center;
-    padding: 80px 20px; /* Add padding top/bottom */
+    padding: 80px 20px; 
     text-align: center;
 }
 
@@ -517,19 +519,18 @@ h1 {
     justify-content: center;
 }
 
-/* Styling for the main "TechWave" logo text */
+
 .logo {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 30px;
-    /* Apply gradient text effect */
     background: linear-gradient(to right, #FFFFFF, #FF0099, #A300FF);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-/* Styling for social media links container */
+
 .social-links {
     margin-bottom: 40px;
     display: flex;
@@ -552,7 +553,7 @@ h1 {
     margin-right: 8px;
 }
 
-/* Styling for the copyright text */
+
 .copyright {
     font-size: 0.8rem;
     color: #cccccc;
@@ -562,8 +563,12 @@ h1 {
 
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* Responsive */
+
+
+
+
+@media (max-width: 576px) {
   .nav-links,
   .subscribe-btn {
     display: none;
@@ -582,13 +587,13 @@ h1 {
     grid-template-columns: repeat(2,1fr);
   }
   .grid-layout {
-        /* Stack all items in a single column on mobile */
+        
         padding: 10px 20px;
         grid-template-columns: 1fr;
         margin-left: 10px;
     }
     .premium, .exclusive {
-        /* Remove row spanning on mobile */
+       
         grid-row: auto !important;
     }
     .card {
@@ -607,7 +612,7 @@ h1 {
     font-size: 1.6rem;
   }
   .profile-card {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column; 
         text-align: center;
     }
 
