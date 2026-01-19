@@ -237,9 +237,12 @@ body {
     text-align: center;
     font-size: 44px;
     padding-bottom: 30px;
+    
 }
 .about p{
     text-align: center;
+    line-height: 40px;
+    
 }
 
 .about h5{
@@ -247,6 +250,316 @@ body {
     margin-top: 60px;
     color: rgb(222, 213, 213);
 }
+.count-section{
+    display: flex;
+    gap: 80px;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.count-section h1{
+    color: rgb(18, 235, 18);
+    font-weight: bold;
+}
+
+/* chosse us section  */
+
+.container {
+    width: 100%;
+    max-height: 1200px;
+    padding: 80px;
+    text-align: center;
+    margin-top: 40px;
+   background: rgba(35, 14, 61, 1);
+
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+   
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.grid-layout {
+    display: grid;
+    /* Defines 2 columns with equal width */
+    margin-left: 190px;
+    grid-template-columns: 1fr 1fr; 
+    /* Defines 3 rows, letting content define height (auto) */
+    grid-template-rows: auto auto auto;
+    gap: 30px; /* Space between grid items */
+}
+
+.card {
+    background-color: #2f1352; /* Card background color */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 40px;
+    margin-bottom: 15px;
+    color: #d1b7ff; /* Icon color */
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+/* Span the 'Premium Audio Quality' and 'Exclusive Interviews' cards across two grid rows */
+.premium, .exclusive {
+    grid-row: span 2; 
+}
+
+/* Position the cards in the desired columns */
+.premium {
+    grid-column: 1 / 2; /* Column 1 */
+}
+
+.mobile {
+    grid-column: 2 / 3; /* Column 2 */
+    grid-row: 1 / 2; /* Row 1 */
+}
+
+.global {
+    grid-column: 2 / 3; /* Column 2 */
+    grid-row: 2 / 3; /* Row 2 */
+}
+
+.exclusive {
+    grid-column: 1 / 2; /* Column 1 */
+    grid-row: 3 / 4; /* Row 3 (it spans up, but this places its start correctly) */
+}
+
+.resources {
+    grid-column: 2 / 3; /* Column 2 */
+    grid-row: 3 / 4; /* Row 3 */
+}
+
+
+
+/* feaure section  */
+.feature {
+  padding: 60px 20px;
+}
+
+.feature h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* Grid */
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  color: white;
+  
+}
+
+/* Card */
+.feature-card {
+  background-color: #4e287d;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
+
+/* Responsive video */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content */
+.feature-card h2 {
+  font-size: 30px;
+  margin: 15px;
+}
+
+.feature-card p {
+  margin: 0 15px 15px;
+  font-size: 0.95rem;
+  
+}
+
+/* Clock */
+.clock {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+  margin: 0 15px;
+}
+
+.clock img {
+  width: 18px;
+}
+.clock p{
+  margin-top: 10px;
+  color: rgb(35, 230, 35);
+  font-weight: bolder;
+}
+
+
+/* meet the host section  */
+.host-section-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    background-color: #3b1b61; /* Inner card background */
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    /* Optional: subtle shadow/glow */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    /* Ensure the placeholder image works */
+    background-color: #5d3d8a; 
+    border: 3px solid #5d3d8a;
+}
+
+.profile-info h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.social-links img{
+   /* Icon color */
+    font-size: 2rem;
+    border:2px solid #5d3d8a;
+    margin-right: 15px;
+    border-radius: 50%;
+    padding: 10px ;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+
+
+/* footer section  */
+.footer-section {
+    width: 100%;
+    margin-top: 50px;
+    /* Add your wave background image here as requested */
+    background-image: url('../images/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px; /* Add padding top/bottom */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the main "TechWave" logo text */
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    /* Apply gradient text effect */
+    background: linear-gradient(to right, #FFFFFF, #FF0099, #A300FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Styling for social media links container */
+.social-links {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+/* Styling for the copyright text */
+.copyright {
+    font-size: 0.8rem;
+    color: #cccccc;
+    opacity: 0.7;
+}
+
+
 
 
 /* RESPONSIVE */
@@ -255,8 +568,55 @@ body {
   .subscribe-btn {
     display: none;
   }
+ .logo-circle{
+    display: none;
+ }
 
   .hamburger {
+    padding-right: 20px ;
     display: block;
   }
+  .count-section{
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .grid-layout {
+        /* Stack all items in a single column on mobile */
+        padding: 10px 20px;
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+    }
+    .premium, .exclusive {
+        /* Remove row spanning on mobile */
+        grid-row: auto !important;
+    }
+    .card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+    .feature{
+      margin-top: 620px;
+    }
+    .feature-container {
+    grid-template-columns: 1fr;
+   
+  }
+
+  .feature h1 {
+    font-size: 1.6rem;
+  }
+  .profile-card {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
 }
